@@ -7,12 +7,11 @@ import "./relayer.sol";
 contract Factory {
     address[] public deployedContracts;
 
-    function createContract(string memory _contractCode)
+    function createContract(address payable _redirectAddress)
         public
         returns (address)
     {
-        bytes memory byteCode = abi.encode(_contractCode);
-        address newContract = address(new FundRedirect(byteCode));
+        address newContract = address(new FundRedirect(_redirectAddress));
         deployedContracts.push(newContract);
         return newContract;
     }
