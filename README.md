@@ -1,3 +1,7 @@
+### Note 
+
+IDK why after `npm run test` compiled contracts are removed. Workaround for running tests: put compiled contracts into `build/contracts/` manually.
+
 ### Compile
 
 npx truffle compile
