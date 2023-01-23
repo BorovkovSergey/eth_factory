@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "truffle compile",
+    "test": "mkdir -p build/contracts && cp node_modules/@openzeppelin/contracts/build/contracts/* build/contracts/ && truffle test"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,8 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.1",
     "@truffle/hdwallet-provider": "^2.1.5",
+    "ganache-cli": "^6.12.2",
+    "solc": "^0.8.17",
     "truffle-plugin-verify": "^0.6.1"
   }
 }
