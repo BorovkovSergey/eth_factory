@@ -8,7 +8,7 @@ import "./FundRedirect.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import {Clones} from "@openzeppelin/contracts/proxy/Clones.sol";
 
-contract FactoryClone is Ownable {
+contract Factory is Ownable {
     address public libraryAddress;
 
     address[] public deployedContracts;
